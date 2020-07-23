@@ -1,25 +1,26 @@
 h1 a, h2 a {
-    color: #14a5e9;
+    color: #4A4E69;
 }
 
 body {
-    padding-left: 15px;
+    background-color: #9A8C98;
 }
 
 .page-header {
-    background-color: #14a5e9;
+    background-color: #4A4E69;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #F2E9E4;
     font-size: 36pt;
     text-decoration: none;
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 h1, h2, h3, h4 {
@@ -27,7 +28,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: #828282;
+    color: #22223B;
 }
 
 .save {
@@ -39,16 +40,22 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #22223B;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #22223B;
 }
 
 .post h2 a, .post h2 a:visited {
-    color: #000000;
+    color: #22223B;
 }
+
+td {
+    text-align: left;
+    padding: 8px;
+  }
