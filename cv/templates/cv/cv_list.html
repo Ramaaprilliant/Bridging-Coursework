@@ -21,15 +21,22 @@
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                    {% for post in posts %}
-                    <div class="cv">
-                        <h2><a>{{ post.title }}</a></h2>
-                        <div class="date">
-                        <p>published: {{ cv.published_date }}</p>
+                    {% regroup cvlists by part as cv_listpost %}
+                        <div class="cv">
+                            {% for part in cv_listpost %}
+                            <ul>
+                                <h2>{{part.grouper}}</h2>
+                                {% for listing in part.list %}
+                                    <ul>
+                                        <h3>{{listing.partname}}</h3>
+                                            <ul>
+                                                <p class="achievement">{{listing.achievement|safe}}</p>
+                                            </ul>
+                                    </ul>
+                                {% endfor %}
+                            </ul>
+                            {% endfor %}
                         </div>
-                        <p>{{ post.text|truncatechars:100|linebreaksbr }}</p>
-                    </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
