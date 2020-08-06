@@ -1,7 +1,7 @@
 {% extends 'cv/cv_base.html' %}
 
 {% block content %}
-{% regroup cvlists by part as cv_listpost %}
+{% regroup cvlists|dictsort:"part" by part as cv_listpost %}
 <div class="cv">
     {% for part in cv_listpost %}
     <ul>
